@@ -1,6 +1,6 @@
 # 📐 ProgSc — Programmation Scientifique : Algèbre Linéaire Numérique en Java
 
-Bibliothèque Java d'algèbre linéaire numérique réalisée dans le cadre du cours de **Programmation Scientifique** à l'EPSI. Le projet implémente de zéro les structures matricielles, les résolutions de systèmes linéaires, l'interpolation polynomiale par moindres carrés et les splines cubiques, avec visualisation graphique via XChart.
+Bibliothèque Java d'algèbre linéaire numérique réalisée dans le cadre du cours de **Programmation Scientifique** à l'Université Le Havre Normandie. Le projet implémente de zéro les structures matricielles, les résolutions de systèmes linéaires, l'interpolation polynomiale par moindres carrés et les splines cubiques, avec visualisation graphique via XChart.
 
 ---
 
@@ -184,7 +184,3 @@ Les fichiers `point*.txt` suivent le format :
 - **Calcul numérique** — Algorithmes d'algèbre linéaire implémentés from scratch
 
 ---
-
-## 📄 Contexte
-
-Projet réalisé dans le cadre du cours de **Programmation Scientifique** | EPSI Lille — Bachelor 3 Data & IA | Année 2024-2025
