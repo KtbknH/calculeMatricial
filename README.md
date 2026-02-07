@@ -24,23 +24,23 @@ Les matrices de Hilbert sont un cas d'école du mauvais conditionnement en algè
 
 #### Taille 2 — κ(H) = 27
 
-![Hilbert taille 2](docs/images/hilbert_taille2.png)
+![Hilbert taille 2](/ProgSc/hilbert_taille2.png)
 
 #### Taille 3 — κ(H) = 748
 
-![Hilbert taille 3](docs/images/hilbert_taille3.png)
+![Hilbert taille 3](/ProgSc/hilbert_taille3.png)
 
 #### Taille 4 — κ(H) ≈ 28 375
 
-![Hilbert taille 4](docs/images/hilbert_taille4.png)
+![Hilbert taille 4](/ProgSc/hilbert_taille4.png)
 
 #### Taille 5 — κ(H) ≈ 943 656
 
-![Hilbert taille 5](docs/images/hilbert_taille5.png)
+![Hilbert taille 5](/ProgSc/hilbert_taille5.png)
 
 #### Taille 6 — κ(H) ≈ 2.9 × 10⁷
 
-![Hilbert taille 6](docs/images/hilbert_taille6.png)
+![Hilbert taille 6](/ProgSc/hilbert_taille6.png)
 
 #### Taille 7 à 15 — Système irrégulier (inversion impossible)
 
@@ -50,31 +50,31 @@ Les matrices de Hilbert sont un cas d'école du mauvais conditionnement en algè
 <summary>📸 Cliquer pour voir les résultats tailles 7 à 15</summary>
 
 **Taille 7** :
-![Hilbert taille 7](docs/images/hilbert_taille7.png)
+![Hilbert taille 7](/ProgSc/hilbert_taille7.png)
 
 **Taille 8** :
-![Hilbert taille 8](docs/images/hilbert_taille8.png)
+![Hilbert taille 8](/ProgSc/hilbert_taille8.png)
 
 **Taille 9** :
-![Hilbert taille 9](docs/images/hilbert_taille9.png)
+![Hilbert taille 9](/ProgSc/hilbert_taille9.png)
 
 **Taille 10** :
-![Hilbert taille 10](docs/images/hilbert_taille10.png)
+![Hilbert taille 10](/ProgSc/hilbert_taille10.png)
 
 **Taille 11** :
-![Hilbert taille 11](docs/images/hilbert_taille11.png)
+![Hilbert taille 11](/ProgSc/hilbert_taille11.png)
 
 **Taille 12** :
-![Hilbert taille 12](docs/images/hilbert_taille12.png)
+![Hilbert taille 12](/ProgSc/hilbert_taille12.png)
 
 **Taille 13** :
-![Hilbert taille 13](docs/images/hilbert_taille13.png)
+![Hilbert taille 13](/ProgSc/hilbert_taille13.png)
 
 **Taille 14** :
-![Hilbert taille 14](docs/images/hilbert_taille14.png)
+![Hilbert taille 14](/ProgSc/hilbert_taille14.png)
 
 **Taille 15** :
-![Hilbert taille 15](docs/images/hilbert_taille15.png)
+![Hilbert taille 15](/ProgSc/hilbert_taille15.png)
 
 </details>
 
@@ -98,11 +98,11 @@ Les matrices de Hilbert sont un cas d'école du mauvais conditionnement en algè
 
 Résolution d'un système linéaire 3×3 via la factorisation LDR, avec vérification que les normes L1, L2 et L∞ de la différence sont toutes à 0.0 (résolution exacte) :
 
-![Helder — Résolution LDR](docs/images/thomas_helder_resolution.png)
+![Helder — Résolution LDR](/ProgSc/thomas_helder_resolution.png)
 
 Vérification du produit matrice × vecteur sur un système d'ordre 3 :
 
-![Helder — Produit matrice-vecteur](docs/images/thomas_helder_produit.png)
+![Helder — Produit matrice-vecteur](/ProgSc/thomas_helder_produit.png)
 
 ---
 
@@ -112,35 +112,35 @@ Interpolation par splines cubiques naturelles sur différents jeux de données, 
 
 #### Fichier `point.txt` — Courbe sinusoïdale amortie (15 points)
 
-![Spline — point.txt](docs/images/spline_point.png)
+![Spline — point.txt](/ProgSc/point.png)
 
 #### Fichier `point1.txt` — Courbe cubique (4 points)
 
-![Spline — point1.txt](docs/images/spline_point1.png)
+![Spline — point1.txt](/ProgSc/point1.png)
 
 #### Fichier `point2.txt` — Courbe parabolique (5 points)
 
-![Spline — point2.txt](docs/images/spline_point2.png)
+![Spline — point2.txt](/ProgSc/point2.png)
 
 #### Fichier `point3.txt` — Courbe sinusoïdale (11 points)
 
-![Spline — point3.txt](docs/images/spline_point3.png)
+![Spline — point3.txt](/ProgSc/point3.png)
 
 #### Fichier `point4.txt` — Courbe sinusoïdale double période (21 points)
 
-![Spline — point4.txt](docs/images/spline_point4.png)
+![Spline — point4.txt](/ProgSc/point4.png)
 
 #### Fichier `point5.txt` — Courbe sinusoïdale amortie (15 points)
 
-![Spline — point5.txt](docs/images/spline_point5.png)
+![Spline — point5.txt](/ProgSc/point5.png)
 
 #### Fichier `point6.txt` — Signal haute fréquence (101 points)
 
-![Spline — point6.txt](docs/images/spline_point6.png)
+![Spline — point6.txt](/ProgSc/point6.png)
 
 #### Fichier `point7.txt` — Signal carré / créneau (101 points)
 
-![Spline — point7.txt](docs/images/spline_point7.png)
+![Spline — point7.txt](/ProgSc/point7.png)
 
 ---
 
