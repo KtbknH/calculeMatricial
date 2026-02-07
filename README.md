@@ -18,35 +18,129 @@ Ce projet couvre progressivement les notions fondamentales du calcul numérique 
 
 ## 🖼️ Résultats et Démonstrations
 
-### Interpolation polynomiale (ModPoly)
+### Matrices de Hilbert — Instabilité numérique
 
-Ajustement polynomial par la méthode des moindres carrés sur un jeu de points de support, avec affichage de la courbe interpolée :
+Les matrices de Hilbert sont un cas d'école du mauvais conditionnement en algèbre linéaire numérique. H[i][j] = 1/(i+j+1). Plus la taille augmente, plus le conditionnement explose et l'inversion devient instable.
 
-![Modèle Polynomial — Interpolation par moindres carrés](docs/images/modpoly_interpolation.png)
+#### Taille 2 — κ(H) = 27
+
+![Hilbert taille 2](docs/images/hilbert_taille2.png)
+
+#### Taille 3 — κ(H) = 748
+
+![Hilbert taille 3](docs/images/hilbert_taille3.png)
+
+#### Taille 4 — κ(H) ≈ 28 375
+
+![Hilbert taille 4](docs/images/hilbert_taille4.png)
+
+#### Taille 5 — κ(H) ≈ 943 656
+
+![Hilbert taille 5](docs/images/hilbert_taille5.png)
+
+#### Taille 6 — κ(H) ≈ 2.9 × 10⁷
+
+![Hilbert taille 6](docs/images/hilbert_taille6.png)
+
+#### Taille 7 à 15 — Système irrégulier (inversion impossible)
+
+À partir de la taille 7, le pivot de la factorisation LDR tombe en dessous de l'EPSILON (10⁻⁶) et le système est détecté comme irrégulier :
+
+<details>
+<summary>📸 Cliquer pour voir les résultats tailles 7 à 15</summary>
+
+**Taille 7** :
+![Hilbert taille 7](docs/images/hilbert_taille7.png)
+
+**Taille 8** :
+![Hilbert taille 8](docs/images/hilbert_taille8.png)
+
+**Taille 9** :
+![Hilbert taille 9](docs/images/hilbert_taille9.png)
+
+**Taille 10** :
+![Hilbert taille 10](docs/images/hilbert_taille10.png)
+
+**Taille 11** :
+![Hilbert taille 11](docs/images/hilbert_taille11.png)
+
+**Taille 12** :
+![Hilbert taille 12](docs/images/hilbert_taille12.png)
+
+**Taille 13** :
+![Hilbert taille 13](docs/images/hilbert_taille13.png)
+
+**Taille 14** :
+![Hilbert taille 14](docs/images/hilbert_taille14.png)
+
+**Taille 15** :
+![Hilbert taille 15](docs/images/hilbert_taille15.png)
+
+</details>
+
+#### Synthèse du conditionnement
+
+| Taille | Conditionnement κ(H) | Résultat |
+|:---:|---:|---|
+| 2 | 27 | ✅ Inversion réussie |
+| 3 | 748 | ✅ Inversion réussie |
+| 4 | 28 375 | ✅ Inversion réussie (erreurs ≈ 10⁻¹⁵) |
+| 5 | 943 656 | ✅ Inversion réussie (erreurs ≈ 10⁻¹³) |
+| 6 | 2.9 × 10⁷ | ✅ Inversion réussie (erreurs ≈ 10⁻¹¹) |
+| 7 | — | ❌ Système irrégulier |
+| 8–15 | — | ❌ Système irrégulier |
+
+> **Observation** : Le conditionnement croît exponentiellement. Dès la taille 7, la factorisation LDR échoue avec un EPSILON de 10⁻⁶. En augmentant l'EPSILON à 10⁻²⁴, on pourrait atteindre des tailles plus grandes mais avec des résultats numériquement douteux.
+
+---
+
+### Factorisation LDR (Helder) et Algorithme de Thomas
+
+Résolution d'un système linéaire 3×3 via la factorisation LDR, avec vérification que les normes L1, L2 et L∞ de la différence sont toutes à 0.0 (résolution exacte) :
+
+![Helder — Résolution LDR](docs/images/thomas_helder_resolution.png)
+
+Vérification du produit matrice × vecteur sur un système d'ordre 3 :
+
+![Helder — Produit matrice-vecteur](docs/images/thomas_helder_produit.png)
+
+---
 
 ### Splines cubiques
 
-Interpolation par splines cubiques naturelles sur différents jeux de données :
+Interpolation par splines cubiques naturelles sur différents jeux de données, visualisée avec XChart. Les points bleus (●) représentent les points de support originaux, la courbe orange (→) montre l'interpolation par spline :
 
-**Courbe parabolique** — Spline sur des points formant une parabole :
+#### Fichier `point.txt` — Courbe sinusoïdale amortie (15 points)
 
-![Spline cubique — Courbe parabolique](docs/images/spline_parabole.png)
+![Spline — point.txt](docs/images/spline_point.png)
 
-**Courbe sinusoïdale** — Spline sur des points formant une sinusoïde (21 points de support) :
+#### Fichier `point1.txt` — Courbe cubique (4 points)
 
-![Spline cubique — Courbe sinusoïdale](docs/images/spline_sinusoide.png)
+![Spline — point1.txt](docs/images/spline_point1.png)
 
-### Matrices de Hilbert — Instabilité numérique
+#### Fichier `point2.txt` — Courbe parabolique (5 points)
 
-Analyse du conditionnement des matrices de Hilbert de taille 2 à 7, montrant l'explosion du conditionnement (27 → 28 375 → ...) et la dégradation du produit H × H⁻¹ par rapport à l'identité :
+![Spline — point2.txt](docs/images/spline_point2.png)
 
-![Résultats Hilbert — Conditionnement croissant](docs/images/hilbert_resultats.png)
+#### Fichier `point3.txt` — Courbe sinusoïdale (11 points)
 
-### Factorisation LDR (Helder) et Thomas
+![Spline — point3.txt](docs/images/spline_point3.png)
 
-Résolution de systèmes linéaires via la factorisation LDR et l'algorithme de Thomas pour matrices tridiagonales, avec vérification des normes L1, L2 et L∞ :
+#### Fichier `point4.txt` — Courbe sinusoïdale double période (21 points)
 
-![Résultats Thomas & Helder](docs/images/thomas_helder_resultats.png)
+![Spline — point4.txt](docs/images/spline_point4.png)
+
+#### Fichier `point5.txt` — Courbe sinusoïdale amortie (15 points)
+
+![Spline — point5.txt](docs/images/spline_point5.png)
+
+#### Fichier `point6.txt` — Signal haute fréquence (101 points)
+
+![Spline — point6.txt](docs/images/spline_point6.png)
+
+#### Fichier `point7.txt` — Signal carré / créneau (101 points)
+
+![Spline — point7.txt](docs/images/spline_point7.png)
 
 ---
 
@@ -88,6 +182,10 @@ ProgSc/
 │   └── xchart-demo-3.8.8.jar
 │
 └── docs/images/                         # Captures d'écran des résultats
+    ├── hilbert_taille2.png ... hilbert_taille15.png
+    ├── thomas_helder_resolution.png
+    ├── thomas_helder_produit.png
+    └── spline_point.png ... spline_point7.png
 ```
 
 ---
