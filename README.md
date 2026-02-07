@@ -180,12 +180,11 @@ ProgSc/
 ├── xchart-3.8.8/                        # Bibliothèque XChart (visualisation graphique)
 │   ├── xchart-3.8.8.jar
 │   └── xchart-demo-3.8.8.jar
-│
-└── docs/images/                         # Captures d'écran des résultats
-    ├── hilbert_taille2.png ... hilbert_taille15.png
-    ├── thomas_helder_resolution.png
-    ├── thomas_helder_produit.png
-    └── spline_point.png ... spline_point7.png
+│                        # Captures d'écran des résultats
+├── hilbert_taille2.png ... hilbert_taille15.png
+├── thomas_helder_resolution.png
+├── thomas_helder_produit.png
+└── spline_point.png ... spline_point7.png
 ```
 
 ---
